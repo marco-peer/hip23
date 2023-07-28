@@ -5,7 +5,7 @@ Marco Peer and Robert Sablatnig: **Feature Mixing for Writer Retrieval and Ident
 
 ## Overview
 
-![overview](assets/overview_hip.pdf)  
+![overview](assets/overview_hip.png)  
 
 
 ## Installation

@@ -1,0 +1,46 @@
+log_dir : "experiments"
+logger : "wandb"
+super_fancy_new_name : fragment_resnet34
+compile_model : False
+
+trainset:
+  dataset : hisfrag20
+  set : train
+
+testset:
+  dataset : hisfrag20
+  set : test
+  
+img_size : [512,512]
+test_img_size : [512,512]
+train_label : writer
+
+model:
+  name : resnet34
+  drop_mixing : True
+  netvlad_clusters : 100
+  mix_depth : 4
+  out_rows : 1
+  out_channels : 512
+
+optimizer_options:
+  optimizer : adam
+  base_lr : 0.0001
+  final_lr : 0.00001
+  warmup_epochs : 2
+  wd : 0
+
+train_options:
+  mixed_precision : true
+  epochs : 50
+  batch_size : 128
+  callback : early_stopping
+  callback_patience : 5
+  loss : triplet
+  type_of_triplets : semihard
+  margin : 0.15
+  sampler_m : 2
+  length_before_new_iter : 256000
+
+pca_dim : 256
+test_batch_size : 64

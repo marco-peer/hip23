@@ -1,0 +1,44 @@
+log_dir : "experiments"
+logger : "wandb"
+super_fancy_new_name : papyrow_retrieval_color_mix_depth4
+compile_model : False
+
+eval_mode : 'retrieval'
+
+dataset:
+  dataset : papyrow
+  set : complete
+dataset_split : [0.3, 0.2]
+
+kfold_config : config/papyri_split.yml
+kfold : 4
+  
+img_size : [128, 512]
+test_img_size : [128, 512]
+train_label : writer
+
+model:
+  name : mixconv
+  backbone : resnet34
+  mix_depth : 4
+  out_rows : 4
+  out_channels : 512
+  
+
+
+optimizer_options:
+  optimizer : adam
+  base_lr : 0.0001
+  final_lr : 0.00001
+  warmup_epochs : 2
+  wd : 0
+
+train_options:
+  mixed_precision : False
+  epochs : 50
+  batch_size : 32
+  callback : early_stopping
+  callback_patience : 10
+
+pca_dim : -1
+test_batch_size : 64

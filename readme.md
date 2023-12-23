@@ -50,16 +50,21 @@ The query is currently identified by its filename. It will output an image, e.g.
 
 
 ## Contact
-In case you have questions or find some errors, do not hesitate to contact me mpeer(at)cvl.tuwien.ac.at.
+In case you have questions or find some errors, do not hesitate to contact me mpeer(at)cvl.tuwien.ac.at. The binarized data is also available on request.
 
 ## References
 Please consider citing our paper if you find it helpful
 
-    @InProceedings{Peer_2023_HIP,
-        author    = {Peer, Marco and Sablatnig, Robert},
-        title     = {Feature Mixing for Writer Retrieval and Identification on Papyri Fragments},
-        booktitle = {accepted for presentation at HIP@ICDAR2023: 7th International Workshop on Historical Document Imaging and Processing},
-        month     = {August},
-        year      = {2023},
+    @inproceedings{peer_feature_mixing_hip23,
+        author = {Peer, Marco and Sablatnig, Robert},
+        title = {Feature Mixing for Writer Retrieval and Identification on Papyri Fragments},
+        year = {2023},
+        doi = {10.1145/3604951.3605515},
+        booktitle = {Proceedings of the 7th International Workshop on Historical Document Imaging and Processing},
+        pages = {31–36},
+        numpages = {6},
+        keywords = {Document Analysis, Writer Retrieval, Writer Identification, Ancient Papyri, Historical Documents},
+        location = {<conf-loc>, <city>San Jose</city>, <state>CA</state>, <country>USA</country>, </conf-loc>},
+        series = {HIP '23}
     }
 
